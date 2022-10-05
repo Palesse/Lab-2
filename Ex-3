@@ -1,0 +1,32 @@
+#include "stdio.h"
+#include "locale.h"
+
+int main(void) {
+	setlocale(LC_ALL, "Russian");
+
+	int n;
+	int k;
+	int quo;
+	int res;
+
+	printf("Введите число n:\n");
+	scanf_s("%d", &n);
+
+	printf("Введите число k:\n");
+	scanf_s("%d", &k);
+
+	int i = 0;
+
+	while (n > k) {
+		n = n - k;
+		i++;
+	}
+
+	quo = i;
+	res = n;
+
+	printf("Частное: %d\n", quo);
+	printf("Остаток: %d\n", res);
+
+	return 0;
+}
