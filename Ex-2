@@ -1,0 +1,30 @@
+#include "stdio.h"
+#include "locale.h"
+
+int main(void) {
+	setlocale(LC_ALL, "Russian");
+
+
+	float c1;
+	float c2;
+
+	printf("Введите объем первого сосуда:\n");
+	scanf_s("%f", &c1);
+
+	printf("Введите объем второго сосуда:\n");
+	scanf_s("%f", &c2);
+
+	for (int i = 0; i < 6; i++) {
+		c2 = c2 + (c1 / 2);
+		c1 = c1 / 2;
+		c1 = c1 + (c2 / 2);
+		c2 = c2 / 2;
+
+	}
+
+	printf("Количество воды в первом сосуде: %f\n", c1);
+	printf("Количество воды во втором сосуде: %f\n", c2);
+
+
+	return 0;
+}
